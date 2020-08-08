@@ -44,5 +44,4 @@ jspm_packages/
 
 # cache and artifacts
 .cache
-public
 .DS_Store
