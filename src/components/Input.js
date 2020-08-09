@@ -27,9 +27,6 @@ const StyledInput = styled.input`
 const Input = React.forwardRef(({ error, required, label, ...props }, ref) => {
   const { id } = props;
 
-  console.log({ id });
-  console.log(`error-${id}`);
-
   return (
     <>
       <StyledInput {...props} ref={ref} error={error} />

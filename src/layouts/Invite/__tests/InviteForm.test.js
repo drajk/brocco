@@ -14,7 +14,6 @@ describe("<InviteForm />", () => {
     const fields = ["fullname", "email"];
 
     fields.forEach((field) => {
-      console.log(getByTestId(`error-${field}`).innerHTML);
       expect(getByTestId(`error-${field}`).innerHTML.length).toBeTruthy();
     });
   });
