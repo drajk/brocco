@@ -28,6 +28,7 @@ const COLOR = {
   grey_t30: "#b2b2b2",
   grey_t70: "#595959",
   error: "#cf000f",
+  error_background: "#ffedee",
 };
 
 const SPACING = {

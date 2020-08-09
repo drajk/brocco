@@ -17,20 +17,6 @@ const Overlay = styled.div`
   transition: opacity 100ms;
 `;
 
-const Content = styled.div`
-  padding: ${CONTENT_OFFSET} ${theme.SPACING.large};
-  background: ${theme.COLOR.white};
-  border-radius: ${theme.SPACING.small};
-  position: relative;
-  margin: 0 auto;
-  transition: all 100ms ease-in-out;
-
-  @media ${theme.BREAKPOINT.tablet} {
-    margin: ${FORM_OFFSET} auto;
-    width: 30%;
-  }
-`;
-
 const Close = styled.div`
   position: absolute;
   top: calc(${CONTENT_OFFSET} + 8px);
@@ -45,11 +31,25 @@ const Close = styled.div`
   }
 `;
 
+const Content = styled.div`
+  padding: ${CONTENT_OFFSET} ${theme.SPACING.large};
+  background: ${theme.COLOR.white};
+  border-radius: ${theme.SPACING.small};
+  position: relative;
+  margin: 0 auto;
+  transition: all 100ms ease-in-out;
+
+  @media ${theme.BREAKPOINT.tablet} {
+    margin: ${FORM_OFFSET} auto;
+    width: 30%;
+  }
+`;
+
 const Body = styled.div`
   height: 100vh;
   overflow: none;
 
-  margin: ${theme.SPACING.very_large} 0;
+  margin-top: ${theme.SPACING.very_large};
 
   @media ${theme.BREAKPOINT.tablet} {
     height: 30%;

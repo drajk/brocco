@@ -1,4 +1,4 @@
-import InviteForm from "./InviteForm";
+import Invite from "./Invite/Invite";
 import Page from "./Page";
 
-export { InviteForm, Page };
+export { Invite, Page };

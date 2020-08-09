@@ -14,6 +14,7 @@ const StyledInput = styled.input`
     props.error &&
     css`
       border-color: ${theme.COLOR.error};
+      background: ${theme.COLOR.error_background};
     `}
 
   width: 90%;

@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 
-import { Page, InviteForm } from "./layouts";
+import { Page, Invite } from "./layouts";
 import { Card } from "./components";
 
 const App = () => {
-  const [showInviteForm, setInviteFormVisibility] = useState(false);
-
-  const formRef = React.createRef();
-
-  const onSubmit = (data, e) => console.log(data, e);
+  const [showForm, setFormVisibility] = useState(false);
 
   return (
     <>
@@ -17,16 +13,10 @@ const App = () => {
           title="A better way to enjoy every day."
           subTitle="Be the first one to know when we launch"
           actionText="Request an invite"
-          onAction={() => setInviteFormVisibility(true)}
+          onAction={() => setFormVisibility(true)}
         />
       </Page>
-      {showInviteForm && (
-        <InviteForm
-          ref={formRef}
-          onClose={() => setInviteFormVisibility(false)}
-          onSubmit={onSubmit}
-        />
-      )}
+      {showForm && <Invite onClose={() => setFormVisibility(false)} />}
     </>
   );
 };

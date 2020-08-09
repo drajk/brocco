@@ -7,7 +7,7 @@ const Card = ({ title, subTitle, actionText, onAction = () => {} }) => (
   <>
     {title && <Text hero>{title}</Text>}
     {subTitle && <Text heading>{subTitle}</Text>}
-    {actionText && <Button onClick={onAction}>{actionText}</Button>}
+    {actionText && <Button text={actionText} onClick={onAction} />}
   </>
 );
 
