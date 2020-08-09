@@ -27,11 +27,20 @@ const StyledContainer = styled.div`
     `}
 `;
 
-const Button = ({ text, isLoading, loadingText, onClick = () => {} }) => (
-  <StyledContainer isLoading={isLoading} onClick={onClick}>
-    {!isLoading && <Text>{text}</Text>}
-    {isLoading && <Text>{loadingText || "loading.."}</Text>}
-  </StyledContainer>
-);
+const Button = ({ text, isLoading, loadingText, onClick = () => {} }) => {
+  const handleClick = () => {
+    if (isLoading) {
+      return;
+    }
+    onClick();
+  };
+
+  return (
+    <StyledContainer isLoading={isLoading} onClick={handleClick}>
+      {!isLoading && <Text>{text}</Text>}
+      {isLoading && <Text>{loadingText || "loading.."}</Text>}
+    </StyledContainer>
+  );
+};
 
 export default Button;
