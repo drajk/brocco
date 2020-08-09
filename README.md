@@ -25,3 +25,11 @@ Run unit tests
 ```
 yarn test
 ```
+
+# Folder structure
+
+I have used standard folder structure where, 
+
+- Tests in __tests__ folder (Should have been more tests :) but I have tried to cover important validations)
+- Reusable "dumb" components in */components* folder
+- Layout / Page specific components in */layouts* folder 

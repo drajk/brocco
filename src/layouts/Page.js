@@ -49,7 +49,7 @@ const Page = ({ title, children }) => (
     {title && (
       <StyledFooter data-testid="page-footer">
         <Text>
-          Made <Heart /> with in Melbourne.
+          Made with <Heart /> in Melbourne.
         </Text>
         <Text>{`© ${new Date().getFullYear()} ${title} All rights reserved.`}</Text>
       </StyledFooter>
