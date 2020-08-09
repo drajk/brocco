@@ -4,7 +4,8 @@ import styled from "styled-components";
 import Text from "./Text";
 import theme from "./theme";
 
-const MARGIN_TOP = "70px";
+const FORM_OFFSET = "70px";
+const CONTENT_OFFSET = "20px";
 
 const Overlay = styled.div`
   position: fixed;
@@ -17,21 +18,22 @@ const Overlay = styled.div`
 `;
 
 const Content = styled.div`
-  padding: ${theme.SPACING.large};
+  padding: ${CONTENT_OFFSET} ${theme.SPACING.large};
   background: ${theme.COLOR.white};
   border-radius: ${theme.SPACING.small};
   position: relative;
+  margin: 0 auto;
   transition: all 100ms ease-in-out;
 
   @media ${theme.BREAKPOINT.tablet} {
-    margin: ${MARGIN_TOP} auto;
+    margin: ${FORM_OFFSET} auto;
     width: 30%;
   }
 `;
 
 const Close = styled.div`
   position: absolute;
-  top: 15px;
+  top: calc(${CONTENT_OFFSET} + 8px);
   right: 20px;
   transition: all 100ms;
   font-size: ${theme.FONT_SIZE.heading};
@@ -46,6 +48,8 @@ const Close = styled.div`
 const Body = styled.div`
   height: 100vh;
   overflow: none;
+
+  margin: ${theme.SPACING.very_large} 0;
 
   @media ${theme.BREAKPOINT.tablet} {
     height: 30%;

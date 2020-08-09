@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 
-import { Page } from "./layouts";
-import { Card, Modal } from "./components";
+import { Page, InviteForm } from "./layouts";
+import { Card } from "./components";
 
 const App = () => {
-  const [isModalVisible, setModalVisible] = useState(false);
+  const [showInviteForm, setInviteFormVisibility] = useState(false);
+
+  const formRef = React.createRef();
+
+  const onSubmit = (data, e) => console.log(data, e);
 
   return (
     <>
@@ -13,13 +17,15 @@ const App = () => {
           title="A better way to enjoy every day."
           subTitle="Be the first one to know when we launch"
           actionText="Request an invite"
-          onAction={() => setModalVisible(true)}
+          onAction={() => setInviteFormVisibility(true)}
         />
       </Page>
-      {isModalVisible && (
-        <Modal title="Request an invite" onClose={() => setModalVisible(false)}>
-          <p>Modal Contant</p>
-        </Modal>
+      {showInviteForm && (
+        <InviteForm
+          ref={formRef}
+          onClose={() => setInviteFormVisibility(false)}
+          onSubmit={onSubmit}
+        />
       )}
     </>
   );

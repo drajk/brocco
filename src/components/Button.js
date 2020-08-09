@@ -6,14 +6,19 @@ import theme from './theme';
 
 const StyledContainer = styled.div`
   display: flex;
+  justify-content: center;
   cursor: pointer;
   border-radius: ${theme.SPACING.small};
   width: auto;
-  padding: 12px 20px;
+  min-width: 150px;
+  padding: ${theme.SPACING.large} 20px;
+  background: ${theme.COLOR.primary};
   border: 1px solid ${theme.COLOR.black};
+  color: ${theme.COLOR.white};
+  text-transform: uppercase;
 
   &:hover {
-    background: ${theme.COLOR.white};
+    background: ${theme.COLOR.hover};
   }
 `;
 
