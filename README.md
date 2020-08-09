@@ -1,7 +1,7 @@
 # Brocco
 Single page app built with [Create React App](https://github.com/facebook/create-react-app).
 
-Addtional packages installed on top of standard creat-react-app setip
+Addtional packages installed on top of standard create-react-app setup
 
 - styled-components
 - react-hook-form
