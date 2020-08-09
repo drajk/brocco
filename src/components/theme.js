@@ -23,6 +23,7 @@ const COLOR = {
   black: "#000",
   grey_t03: "#f8f8f8",
   grey_t07: "#ececec",
+  hover: "#06d85e"
 };
 
 const SPACING = {
