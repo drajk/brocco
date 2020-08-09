@@ -24,11 +24,20 @@ const StyledInput = styled.input`
   }
 `;
 
-const Input = React.forwardRef(({ error, required, label, ...props }, ref) => (
-  <>
-    <StyledInput {...props} ref={ref} error={error} />
-    <Text color={theme.COLOR.error}>{error && error.message}</Text>
-  </>
-));
+const Input = React.forwardRef(({ error, required, label, ...props }, ref) => {
+  const { id } = props;
+
+  console.log({ id });
+  console.log(`error-${id}`);
+
+  return (
+    <>
+      <StyledInput {...props} ref={ref} error={error} />
+      <Text data-testid={`error-${id}`} color={theme.COLOR.error}>
+        {error && error.message}
+      </Text>
+    </>
+  );
+});
 
 export default Input;
