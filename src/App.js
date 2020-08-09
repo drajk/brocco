@@ -1,19 +1,17 @@
 import React from "react";
-import styled from "styled-components";
 
-const StyledApp = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-`;
+import { Page } from "./layouts";
+import { Card } from "./components";
 
 const App = () => (
-  <StyledApp>
-    <p>Broccoli & Co.</p>
-  </StyledApp>
+  <Page title="Broccoli & Co.">
+    <Card
+      title="A better way to enjoy every day."
+      subTitle="Be the first one to know when we launch"
+      actionText="Request an invite"
+      onAction={() => console.log('I am clicked!')}
+    />
+  </Page>
 );
 
 export default App;
