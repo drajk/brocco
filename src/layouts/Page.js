@@ -39,7 +39,7 @@ const StyledFooter = styled.footer`
 const Page = ({ title, children }) => (
   <StyledContainer>
     {title && (
-      <StyledHeader>
+      <StyledHeader data-testid="page-header">
         <Text heading uppercase>
           {title}
         </Text>
@@ -47,7 +47,7 @@ const Page = ({ title, children }) => (
     )}
     <StyledBody>{children}</StyledBody>
     {title && (
-      <StyledFooter>
+      <StyledFooter data-testid="page-footer">
         <Text>
           Made <Heart /> with in Melbourne.
         </Text>

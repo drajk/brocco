@@ -4,7 +4,7 @@ import { act, fireEvent, render } from "@testing-library/react";
 import InviteForm from "../InviteForm";
 
 describe("<InviteForm />", () => {
-  it("validates required fields", async () => {
+  it("should validate required fields", async () => {
     const { getByRole, getByTestId } = render(<InviteForm />);
 
     await act(async () => {
@@ -19,7 +19,7 @@ describe("<InviteForm />", () => {
     });
   });
 
-  it("validates invalid fields", async () => {
+  it("should validate invalid fields", async () => {
     const { getByRole, getByTestId } = render(
       <InviteForm
         defaultValues={{
@@ -40,7 +40,7 @@ describe("<InviteForm />", () => {
     });
   });
 
-  it("validates confirm email", async () => {
+  it("should validate confirm email", async () => {
     const { getByRole, getByTestId } = render(
       <InviteForm
         defaultValues={{
