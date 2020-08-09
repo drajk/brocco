@@ -23,7 +23,7 @@ describe("<InviteForm />", () => {
       <InviteForm
         defaultValues={{
           fullname: "ss",
-          email: "lol",
+          email: "some invalid email",
         }}
       />
     );
@@ -39,7 +39,7 @@ describe("<InviteForm />", () => {
     });
   });
 
-  it("should validate confirm email", async () => {
+  it("should validate confirm email when email is entered", async () => {
     const { getByRole, getByTestId } = render(
       <InviteForm
         defaultValues={{
